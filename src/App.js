@@ -6,7 +6,9 @@ import SearchNote from "./Components/SearchNote";
 export const NotesContext = createContext();
 
 const App = () => {
-  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")));
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem("notes")) || []
+  );
   const [search, setSetSearch] = useState("");
 
   useEffect(() => {
