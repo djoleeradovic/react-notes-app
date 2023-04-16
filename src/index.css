@@ -219,4 +219,8 @@ body::-webkit-scrollbar-thumb {
     width: var(--container-width-md);
     margin: 2rem auto;
   }
+
+  .colors {
+    left: calc(50% - 1.2rem);
+  }
 }
