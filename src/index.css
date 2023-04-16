@@ -27,6 +27,7 @@
 
   --container-width-lg: 60%;
   --container-width-md: 80%;
+  --container-width-sm: 90%;
 }
 
 body {
@@ -219,8 +220,14 @@ body::-webkit-scrollbar-thumb {
     width: var(--container-width-md);
     margin: 2rem auto;
   }
+}
 
-  .colors {
-    left: calc(50% - 1.2rem);
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+    margin: 2rem auto;
+  }
+  .note .colors {
+    left: calc(50% - 1.7rem);
   }
 }
