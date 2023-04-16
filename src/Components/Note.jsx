@@ -1,6 +1,7 @@
 import { React, useContext, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { NotesContext } from "../App";
+import { IoMdColorPalette } from "react-icons/io";
 
 const Note = ({ id, text, date, color }) => {
   const { deleteNote, editNote, changeColor } = useContext(NotesContext);
@@ -23,10 +24,10 @@ const Note = ({ id, text, date, color }) => {
       ></textarea>
       <footer>
         <small>{date}</small>
-        <button
+        <IoMdColorPalette
           className="colors-btn"
           onClick={() => setShowColors((prev) => !prev)}
-        ></button>
+        />
         <div className={showColors ? "colors" : "hide"}>
           <span className="default" onClick={() => change(id, "")}></span>
           <span className="danger" onClick={() => change(id, "danger")}></span>
