@@ -21,6 +21,8 @@
   --color-secondary: #ff9100;
   --color-white: #fff;
 
+  --color-shadow: rgba(0, 0, 0, 0.29);
+
   --color-danger: rgb(167, 35, 35);
   --color-success: rgb(29, 110, 29);
   --color-warning: rgb(255, 208, 0);
@@ -76,6 +78,29 @@ body::-webkit-scrollbar-thumb {
 
   --color-secondary: #000;
   --color-white: #000;
+}
+
+.white-theme {
+  --color-bg: #efe7d3;
+  --color-primary: #f6e6e8;
+  --color-secondary: #fff;
+  --color-white: #111;
+  --color-shadow: rgba(255, 255, 255, 0.29);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.theme svg {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .search {
@@ -139,7 +164,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--color-white);
   padding: 1rem;
   border-radius: 2rem 1rem;
-  box-shadow: 10px 11px 13px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 10px 11px 13px 0px var(--color-shadow);
   display: flex;
   justify-content: space-between;
   flex-direction: column;

@@ -1,7 +1,6 @@
 import { React, useState, useEffect, createContext } from "react";
 import "./index.css";
-import NotesList from "./Components/NotesList";
-import SearchNote from "./Components/SearchNote";
+import { Header, SearchNote, NotesList } from "./Components";
 
 export const NotesContext = createContext();
 
@@ -65,6 +64,7 @@ const App = () => {
       value={{ addNote, deleteNote, editNote, changeColor }}
     >
       <div className="container">
+        <Header />
         <SearchNote handleSearchNote={setSetSearch} />
         <NotesList
           notes={notes.filter((note) =>

@@ -1,5 +1,5 @@
-import Note from "./Note";
-import AddNote from "./AddNote";
+import React from "react";
+import { AddNote, Note } from "./";
 
 const NotesList = ({ notes }) => {
   return (
